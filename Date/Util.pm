@@ -38,7 +38,7 @@ sub date_diff(Date:D $dt_start, Date:D $dt_end, DurType $pattern ) is export {
 
     return %result{$pattern};
 }
-
+=pod begin
 `#(
 sub date_cmp(Date:D $dt1, Date:D $dt2) is export {
 	given $dt1 - $dt2 {
@@ -48,4 +48,4 @@ sub date_cmp(Date:D $dt1, Date:D $dt2) is export {
 	}
 }
 )
-
+=pod end
