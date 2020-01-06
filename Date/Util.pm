@@ -2,7 +2,7 @@ use v6.c;
 
 unit module Date::Util;
 
-enum DurType is export <Y M D YMD>;
+subtype DurType of Str where { $_ eq < Y M D YMD >.one};
 
 sub date_diff(Date:D $dt_start, Date:D $dt_end, DurType $pattern ) is export {
     my Int $dur_day = $dt_end - $dt_start ; 
